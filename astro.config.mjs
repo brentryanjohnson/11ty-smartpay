@@ -21,5 +21,10 @@ export default defineConfig({
         [process_image_urls, {baseURL: base}]
       ],
     },
-    redirects: generateRedirects(base)
+    redirects: generateRedirects(base),
+    server: {
+        headers:{
+            "Cache-Control": "no-cache"
+        }
+    }
 });
